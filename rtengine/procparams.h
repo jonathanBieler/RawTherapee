@@ -1604,7 +1604,10 @@ struct LocallabParams {
         bool forcebw;
         bool qtoj;
         bool jabcie;
-        bool sigmoidqjcie;
+        bool comprcieauto;
+        bool normcie;
+        bool trccie;
+        bool sigcie;
         bool logcie;
         bool logjz;
         bool sigjz;
@@ -1615,6 +1618,7 @@ struct LocallabParams {
         Glib::ustring sursourcie;
         Glib::ustring modecie;
         Glib::ustring modecam;
+        Glib::ustring bwevMethod;
         double saturlcie;
         double rstprotectcie;
         double chromlcie;
@@ -1661,7 +1665,14 @@ struct LocallabParams {
         double targetjz;
         double sigmoidldacie;
         double sigmoidthcie;
+        double sigmoidsenscie;
         double sigmoidblcie;
+        double comprcie;
+        double comprcieth;
+        double gamjcie;
+        double slopjcie;
+        Glib::ustring primMethod;
+        Glib::ustring catMethod;
         double sigmoidldajzcie;
         double sigmoidthjzcie;
         double sigmoidbljzcie;
@@ -1686,6 +1697,7 @@ struct LocallabParams {
         std::vector<double> CCmaskciecurve;
         std::vector<double> LLmaskciecurve;
         std::vector<double> HHmaskciecurve;
+        std::vector<double> HHhmaskciecurve;
         int blendmaskcie;
         double radmaskcie;
         double chromaskcie;
@@ -1697,7 +1709,16 @@ struct LocallabParams {
         double lowthrescie;
         double higthrescie;
         double decaycie;
-
+        double strumaskcie;
+		bool toolcie;
+        bool fftcieMask;
+		double contcie;
+		double blurcie;
+		double highmaskcie;
+		double shadmaskcie;
+        std::vector<double> LLmaskciecurvewav;
+        Threshold<int> csthresholdcie;
+		
         LocallabSpot();
 
         bool operator ==(const LocallabSpot& other) const;

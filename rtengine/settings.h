@@ -93,7 +93,7 @@ public:
     int             previewselection;
     double          cbdlsensi;
 //    bool            showtooltip;
-
+	double 			basecorlog;
     int             itcwb_thres;
     bool            itcwb_sorted;
     int             itcwb_greenrange;
